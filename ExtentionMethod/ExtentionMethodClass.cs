@@ -12,5 +12,19 @@ namespace ExtentionMethod
         {
             return a - b;
         }
+
+        //Creating extention method to check whether character is existed from a list of characters in a string
+
+        public static bool isCharExists(this string str, params char[] inputChars)
+        {
+            for(int i = 0; i<inputChars.Length;i++)
+            {
+                if(str.Contains(inputChars[i].ToString()))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
